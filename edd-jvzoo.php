@@ -99,7 +99,7 @@ class EDD_JVZoo {
      * valid JVZoo request
      **/
     public function jvzipnVerification() {
-        //  Get the jvzoo key
+        //  Get the JVZoo key
         global $edd_options;
         $edd_jvzoo_secret_key = isset( $edd_options['edd_jvzoo_secret_key'] ) ? trim( $edd_options['edd_jvzoo_secret_key'] ) : '';
 
@@ -133,7 +133,7 @@ class EDD_JVZoo {
     private function processJVZooRequest() {
         global $edd_options;
 
-        // Trash any slashes in the Wordpress POST array
+        // Trash any slashes in the WordPress POST array
         $_POST = stripslashes_deep( $_POST );
 
         if ( $this->jvzipnVerification() ) {
